@@ -179,7 +179,7 @@ function NeotestAdapter.build_spec(args)
 
   local rx_command = vim.tbl_flatten({
     "rx", "task", "exec",
-    "\"" .. command .. "\"",
+    "\"" .. table.concat(command, " ") .. "\"",
   })
 
   return {
