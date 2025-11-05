@@ -177,9 +177,16 @@ function NeotestAdapter.build_spec(args)
     script_args,
   })
 
+  local rx_command = vim.tbl_flatten({
+    "rx", "task", "exec",
+    '"',
+    command,
+    '"'
+  })
+
   return {
     cwd = engine_name,
-    command = command,
+    command = rx_command,
     context = {
       results_path = results_path,
       engine_name = engine_name,
