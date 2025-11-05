@@ -116,21 +116,21 @@ function NeotestAdapter.build_spec(args)
   local formatter = config.formatter()
 
   local script_args = {
-    "-f",
-    formatter,
-    "-o",
-    results_path,
-    "-f",
-    "progress",
+--    "-f",
+--    formatter,
+--    "-o",
+--    results_path,
+--    "-f",
+--    "progress",
   }
 
-  if formatter == "NeotestFormatter" then
-    script_args = vim.tbl_flatten({
-      "--require",
-      formatter_path,
-      script_args,
-    })
-  end
+--  if formatter == "NeotestFormatter" then
+--    script_args = vim.tbl_flatten({
+--      "--require",
+--      formatter_path,
+--      script_args,
+--    })
+--  end
 
   local function run_by_filename()
     table.insert(script_args, spec_path)
