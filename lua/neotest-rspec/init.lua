@@ -184,7 +184,7 @@ function NeotestAdapter.build_spec(args)
 
   return {
     cwd = engine_name,
-    command = rx_command,
+    command = command,
     context = {
       results_path = results_path,
       engine_name = engine_name,
